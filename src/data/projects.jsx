@@ -14,7 +14,7 @@ export default [
     işletim sistemi üzerinde kurulu olan Sambapos isimli restoran otomasyon uygulaması ile graphql ile bağlantı kuruyor ve kullanıcı odaklı
     bir arayüz ile kulanıcının menü görüntüleme, ürün seçimi, ödeme gibi işlemleri gerçekleştirmesine olanak sağlıyor. 
     `,
-    image: '/sambapos_kiosk.webp',
+    image: 'sambapos_kiosk.webp',
     backgroundColor: '#fdffb6',
     isReverse: true,
     technologies: [
@@ -50,7 +50,7 @@ export default [
     description: `Fonksiyonel, özelleştirilebilir ve geliştirilmeye açık bir admin template projesi geliştirdim. Birbirinden oldukça farklı configürasyon 
     seçenekleri ile temayı kullanmak isteyen kullanıcılara fırsatlar sunuyor. Geniş bir component desteği ekledim.
     `,
-    image: '/londoner_web.webp',
+    image: 'londoner_web.webp',
     backgroundColor: '#caffbf',
     technologies: [
       {
@@ -76,7 +76,7 @@ export default [
     Projeyi, Ipad tabletler üzerinde çalışmak üzere geliştirdim. Uygulama içerisinde önceden el ile eklenilmiş çeşitli video ve 
     resimlerin seçilmesi, bunlarla bir sunum hazırlanması, gösterilmesi ve kaydedilmesi sağlanmıştır.
     `,
-    image: '/londoner_tablet.webp',
+    image: 'londoner_tablet.webp',
     backgroundColor: '#bdb2ff',
     color: 'white',
     isReverse: true,

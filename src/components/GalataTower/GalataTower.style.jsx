@@ -12,7 +12,6 @@ const positionAbsolute = css`
 export const ImageContainer = styled(animated.figcaption)`
   position: relative;
   overflow: hidden;
-  cursor: pointer;
 `;
 
 const imageCover = css`

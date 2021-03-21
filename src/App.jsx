@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Grid, Col, Row } from 'react-styled-flexboxgrid';
 
 import NameComponent from './components/NameComponent';
@@ -6,70 +6,14 @@ import Project from './components/Project';
 import Menu, { MenuItem } from './components/Menu';
 import AnimatedHeading from './components/AnimatedHeading';
 import projects from './data/projects';
-import Cursor from './components/Cursor/Cursor';
+import Cursor from './components/Cursor';
 
 function App() {
-  const [cursor, setCursor] = useState({
-    display: 'block',
-    border: 'border: 2px solid black',
-    background: 'transparent',
-    x: 0,
-    y: 0
-  });
-
-  const onMouseMove = e => {
-    setCursor({
-      display: 'block',
-      border: 'border: 2px solid black',
-      background: 'transparent',
-      x: e.clientX,
-      y: e.clientY
-    });
-  };
-
-  const onMouseDown = e => {
-    setCursor({
-      ...cursor,
-      x: e.clientX,
-      y: e.clientY,
-      border: 'border: 2px solid cornflowerBlue',
-      background: 'cornflowerBlue'
-    });
-  };
-
-  const onMouseUp = e => {
-    setCursor({
-      ...cursor,
-      x: e.clientX,
-      y: e.clientY,
-      border: '',
-      background: ''
-    });
-  };
-
-  const onMouseLeave = e => {
-    setCursor({ ...cursor, x: e.clientX, y: e.clientY, display: 'none' });
-  };
-
-  const onMouseEnter = e => {
-    setCursor({ ...cursor, x: e.clientX, y: e.clientY, display: '' });
-  };
-
-  useEffect(() => {
-    window.addEventListener('mousemove', onMouseMove);
-    window.addEventListener('mousedown', onMouseDown);
-    window.addEventListener('mouseup', onMouseUp);
-    window.addEventListener('mouseleave', onMouseLeave);
-    window.addEventListener('mouseenter', onMouseEnter);
-    return () => {
-      window.removeEventListener('mousemove', onMouseMove);
-    };
-  }, []);
-
   return (
     <Grid fluid style={{ padding: 0 }}>
+      <Cursor />
       <Menu>
-        <MenuItem href="#my-works">My Works</MenuItem>
+        <MenuItem href="#works">Works</MenuItem>
         <MenuItem>Skills</MenuItem>
         <MenuItem>Contact</MenuItem>
       </Menu>
@@ -87,7 +31,7 @@ function App() {
           </Row>
         </Col>
       </Row>
-      <Row id="my-works">
+      <Row id="works">
         <Col xs={12}>
           {projects.map((project, i) => (
             <Row key={`project-${i}`}>

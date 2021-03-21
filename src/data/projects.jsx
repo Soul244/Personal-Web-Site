@@ -9,7 +9,7 @@ import {
 
 export default [
   {
-    heading: 'Sambapos V5 Kiosks',
+    name: 'Sambapos V5 Kiosks',
     description: `Sambapos V5 isimli uygulama ile entegre bir biçimde çalışan bir masaüstü uygulaması geliştirdim. Uygulama, 
     işletim sistemi üzerinde kurulu olan Sambapos isimli restoran otomasyon uygulaması ile graphql ile bağlantı kuruyor ve kullanıcı odaklı
     bir arayüz ile kulanıcının menü görüntüleme, ürün seçimi, ödeme gibi işlemleri gerçekleştirmesine olanak sağlıyor. 
@@ -46,7 +46,7 @@ export default [
     ]
   },
   {
-    heading: 'Londoner React Admin Template',
+    name: 'Londoner React Admin Template',
     description: `Fonksiyonel, özelleştirilebilir ve geliştirilmeye açık bir admin template projesi geliştirdim. Birbirinden oldukça farklı configürasyon 
     seçenekleri ile temayı kullanmak isteyen kullanıcılara fırsatlar sunuyor. Geniş bir component desteği ekledim.
     `,
@@ -71,13 +71,13 @@ export default [
     ]
   },
   {
-    heading: 'Royal Air Force Presentation App',
+    name: 'Royal Air Force Presentation App',
     description: `Birleşik Krallık Hava Kuvvetleri içerisinde kullanılmak üzere geliştirmiş olduğum bir IOS projesi.
     Projeyi, Ipad tabletler üzerinde çalışmak üzere geliştirdim. Uygulama içerisinde önceden el ile eklenilmiş çeşitli video ve 
     resimlerin seçilmesi, bunlarla bir sunum hazırlanması, gösterilmesi ve kaydedilmesi sağlanmıştır.
     `,
     image: 'londoner_tablet.webp',
-    backgroundColor: '#bdb2ff',
+    backgroundColor: '#C95D63',
     color: 'white',
     isReverse: true,
     technologies: [

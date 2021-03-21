@@ -1,8 +1,7 @@
-import { darken } from 'polished';
 import { animated } from 'react-spring';
 import styled from 'styled-components';
 
-export const HEIGHT_VH = 80;
+export const HEIGHT_VH = 70;
 
 export const Container = styled.div`
   position: relative;
@@ -72,15 +71,20 @@ export const RightContainerBackground = styled(animated.div)`
   right: 0;
   bottom: 0;
   width: 100%;
-  background-color: ${props => darken(0.15, props.$backgroundColor)};
+  background-color: ${props => props.$backgroundColor};
 `;
 
 export const Heading = styled.h3`
   position: relative;
-  margin: 0 0 2rem 0;
   color: ${props => props.color};
   font-size: 2rem;
   text-transform: uppercase;
+  :first-child {
+    margin: 0 0 2rem 0;
+  }
+  :not(:first-child) {
+    margin: 2rem 0;
+  }
 `;
 
 export const Description = styled.p`
@@ -91,6 +95,7 @@ export const Description = styled.p`
 
 export const TechologiesContainer = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   flex-wrap: wrap;
 `;

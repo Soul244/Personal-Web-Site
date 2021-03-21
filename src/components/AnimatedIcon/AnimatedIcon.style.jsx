@@ -5,13 +5,12 @@ export const Container = styled.div`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 0.25rem 0.25rem 0;
+  margin: 0.5rem 0.25rem;
   padding: 0.375rem 0.75rem;
   color: ${({ color }) => color};
   border: ${({ color }) => `1px solid ${color}`};
   border-radius: 16px;
   transition: all 0.15s linear;
-  cursor: pointer;
   svg {
     font-size: 1.4rem !important;
     transition: all 0.15s linear;

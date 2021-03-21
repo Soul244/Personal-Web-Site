@@ -20,6 +20,7 @@ import {
   ButtonText,
   Link
 } from './NameComponent.style';
+import ScrollDown from '../ScrollDown/ScrollDown';
 
 const NameComponent = forwardRef((_, ref) => {
   const [toggle, setToggle] = useState(false);
@@ -90,6 +91,7 @@ const NameComponent = forwardRef((_, ref) => {
         <MyImage src="me.webp" alt="hasan can gedik" style={{ transform: imageScale }} />
         <ImageBorder />
       </MyImageContainer>
+
       <NameContainer>
         <Name
           onMouseEnter={() => setToggle(true)}
@@ -135,7 +137,7 @@ const NameComponent = forwardRef((_, ref) => {
         </DownloadIconContainer>
         <ButtonText style={{ marginLeft: buttonTextMargin }}>Resume</ButtonText>
       </Button>
-      <IconsContainer>
+      {/* <IconsContainer>
         <Link href="https://www.linkedin.com/in/hasan-can-gedik/" target="_blank">
           <IconContainer>
             <FaLinkedin style={{ color: '#2867B2' }} />
@@ -146,7 +148,8 @@ const NameComponent = forwardRef((_, ref) => {
             <FaGithubSquare style={{ color: '#24292e' }} />
           </IconContainer>
         </Link>
-      </IconsContainer>
+      </IconsContainer> */}
+      <ScrollDown />
     </Container>
   );
 });

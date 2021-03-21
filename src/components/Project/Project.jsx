@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Col, Row } from 'react-styled-flexboxgrid';
 import handleViewport from 'react-in-viewport';
 import { useSpring, config } from 'react-spring';
+import { darken } from 'polished';
 
 import {
   Container,
@@ -20,7 +21,7 @@ import {
 import AnimatedIcon from '../AnimatedIcon';
 
 const Project = ({
-  heading,
+  name,
   number,
   image,
   description,
@@ -49,33 +50,42 @@ const Project = ({
         {number}
       </Number>
       <Row style={{ flexDirection: isReverse ? 'row-reverse' : 'row' }}>
-        <Col xs={12} sm={6}>
+        <Col xs={12} sm={4}>
           <LeftContainer
-            $backgroundColor={backgroundColor}
+            $backgroundColor={darken(0.075, backgroundColor)}
             style={{ height: leftAnim.height.interpolate(height => `${height}vh`) }}
           >
             <ImageContainer>
-              <Image src={image} alt={heading} />
+              <Image src={image} alt={name} />
             </ImageContainer>
           </LeftContainer>
         </Col>
-        <Col xs={12} sm={6}>
+        <Col xs={12} sm={4}>
           <RightContainer
             style={{
               transform: rightAnim.y.interpolate(y => `translateY(${y}px)`)
             }}
           >
-            <Heading color={color}>{heading}</Heading>
+            <Heading color={color}>{name}</Heading>
             <Description color={color}>{description}</Description>
+            <RightContainerBackground $backgroundColor={darken(0.175, backgroundColor)} />
+          </RightContainer>
+        </Col>
+        <Col xs={12} sm={4}>
+          <RightContainer
+            style={{
+              transform: rightAnim.y.interpolate(y => `translateY(${y}px)`)
+            }}
+          >
             <Heading color={color} as="h3">
               Technologies
             </Heading>
             <TechologiesContainer>
               {technologies.map((technology, i) => (
-                <AnimatedIcon key={`${heading}-technology-${i}`} color={color} {...technology} />
+                <AnimatedIcon key={`${name}-technology-${i}`} color={color} {...technology} />
               ))}
             </TechologiesContainer>
-            <RightContainerBackground $backgroundColor={backgroundColor} />
+            <RightContainerBackground $backgroundColor={darken(0.25, backgroundColor)} />
           </RightContainer>
         </Col>
       </Row>
@@ -90,7 +100,7 @@ Project.defaultProps = {
 };
 
 Project.propTypes = {
-  heading: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,

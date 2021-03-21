@@ -11,7 +11,6 @@ export const Link = styled(animated.a)`
   color: ${props => props.theme.textColor};
   text-align: center;
   text-decoration: none;
-  cursor: pointer;
   transition: color 0.15s;
   ${Container}:hover && {
     color: ${props => props.theme.menuColor};

@@ -8,11 +8,16 @@ import * as serviceWorker from './serviceWorker';
 
 const GlobalStyle = createGlobalStyle`
   ${normalize()};
+  ::selection {
+      color: white;
+      background: #1a1a1a;
+    }
   html{
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
     background-color: #FDFDFD;
+    cursor: none;
   }
 `;
 

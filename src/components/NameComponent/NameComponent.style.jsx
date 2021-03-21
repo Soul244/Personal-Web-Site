@@ -22,7 +22,6 @@ export const MyImage = styled(animated.img)`
   border-radius: 50%;
   vertical-align: middle;
   transition: transform 0.3s;
-  cursor: pointer;
   :hover {
     transform: scale(1.2) !important;
   }
@@ -53,7 +52,6 @@ export const Name = styled(animated.h1)`
   text-align: center;
   user-select: none;
   overflow: ${props => (props.$toggle ? null : 'hidden')};
-  cursor: pointer;
   @media (max-width: 992px) {
     font-size: 3rem;
   }
@@ -78,7 +76,6 @@ export const IconsContainer = styled.div`
 `;
 
 export const IconContainer = styled.span`
-  cursor: pointer;
   transition: opacity 0.15s linear;
   svg {
     margin: 0 0.5rem;
@@ -102,7 +99,6 @@ export const Button = styled(animated.a)`
   border-radius: 32px;
   font-size: 1.2rem;
   text-decoration: none;
-  cursor: pointer;
   transition: color 0.15s, border-color 0.15s;
   :hover {
     color: ${props => props.theme.menuColor};

@@ -2,7 +2,6 @@
   "name": "personal-web-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://soul244.github.io/personal-web-site/",
   "dependencies": {
     "@juggle/resize-observer": "^3.2.0",
     "@testing-library/jest-dom": "^4.2.4",
